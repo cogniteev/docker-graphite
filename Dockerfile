@@ -3,10 +3,24 @@ from	ubuntu:14.04
 
 env REFRESHED_AT 2014_04_22
 
-run	apt-get -y update
+run	apt-get -qqy update
 
 # Install required packages
-run	apt-get -y install python-ldap python-cairo python-django python-twisted python-django-tagging python-simplejson python-memcache python-pysqlite2 python-support python-pip gunicorn supervisor nginx-light python-tz
+run	apt-get -qqy install  \
+    gunicorn              \
+    nginx-light           \
+    python-cairo          \
+    python-django         \
+    python-django-tagging \
+    python-ldap           \
+    python-memcache       \
+    python-pip            \
+    python-pysqlite2      \
+    python-simplejson     \
+    python-support        \
+    python-twisted        \
+    python-tz             \
+    supervisor
 run	pip install whisper
 run	pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/lib" carbon
 run	pip install --install-option="--prefix=/var/lib/graphite" --install-option="--install-lib=/var/lib/graphite/webapp" graphite-web
