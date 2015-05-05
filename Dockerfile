@@ -3,7 +3,6 @@ from	ubuntu:14.04
 
 env REFRESHED_AT 2014_04_22
 
-run	echo 'deb http://us.archive.ubuntu.com/ubuntu/ precise universe' >> /etc/apt/sources.list
 run	apt-get -y update
 
 # Install required packages
