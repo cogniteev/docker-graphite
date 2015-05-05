@@ -58,3 +58,6 @@ If you want to store data in your home directory on the host you need to do the 
 	* `sudo mount -t vboxsf -o uid=33,gid=33 Users /Users`
 * Start with the volume: `docker run --name graphite -p 8080:80 -p 2003:2003 -v /Users/<you>/docker/graphite:/var/lib/graphite/storage/whisper -d tilman/graphite`
 
+### License
+
+The `cogniteev/graphite` image is licensed under the Apache License, Version 2.0. See LICENSE for full license text.
